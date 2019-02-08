@@ -11,33 +11,28 @@ export class GraficoBarrasComponent implements OnInit {
   @Input('chartConfig') chartConfig: any = {};
 
  // @Input() graficos: any;
-
-  barChartOptions: any = {
-    scaleShowVerticalLines: true,
-    responsive: true
-  };
-  barChartLabels: string[] = [/* 'Semana 1', 'Semana 2', 'Semana 3', 'Semana 4' */];
-  barChartType = 'bar';
-  barChartLegend = true;
-
-  barChartData: any[] = [
-    /* {data: [5, 4, 3, 4], label: 'Contenedor EPIs (P)'},
+ /* barChartLabels: string[] = [ 'Semana 1', 'Semana 2', 'Semana 3', 'Semana 4' ]; */
+ /*  barChartData: any[] = [
+     {data: [5, 4, 3, 4], label: 'Contenedor EPIs (P)'},
     {data: [5, 3, 1, 4], label: 'Contenedor Mezcla (P)'},
     {data: [4, 5, 3, 1], label: 'Contenedor Papel y cartón (G)'},
     {data: [1, 4, 5, 3], label: 'Contenedor RSU (P)'},
     {data: [4, 1, 3, 5], label: 'Contenedor de plástico/envases contaminados (P)'},
     {data: [5, 2, 3, 5], label: 'Contenedor de plástico/envases no contaminados (P)'},
-    {data: [2, 5, 3, 0], label: 'Cuba chatarra'},
- */
-  ];
+    {data: [2, 5, 3, 0], label: 'Cuba chatarra'}
+  ]; */
+
+  barChartOptions: any = {
+    scaleShowVerticalLines: true,
+    responsive: true
+  };
+  barChartType = 'bar';
+  barChartLegend = true;
+
 
   constructor() { }
 
   ngOnInit() {
-    /* console.log(this.graficos);
-
-    this.barChartData = this.graficos.data;
-    this.barChartLabels = this.graficos.labels; */
   }
 
   public chartClicked(e: any): void {

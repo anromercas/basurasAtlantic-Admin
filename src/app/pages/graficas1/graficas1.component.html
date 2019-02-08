@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-6" *ngFor="let chart of chartsConfig">
+    <div class="col-md-4" *ngFor="let chart of chartsConfig">
         <div class="card">
             <div class="card-body text-center">
                 <h2> <u> <b> Gráfica por semana último mes completado {{ chart.leyenda }} </b> </u> </h2>
@@ -11,17 +11,27 @@
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-4" *ngFor="let chart of chartsConf">
         <div class="card">
-            <div class="card-body">
-                <ul>
-                    <li class="text" *ngFor="let item of items | async">
-                        {{ item.nombre }}
-                    </li>
-                </ul>
+            <div class="card-body text-center">
+                <h2> <u> <b> Gráfica por semana último mes completado </b> </u> </h2>
+                <app-grafico-donas [chartConf]="chart"></app-grafico-donas>
+
             </div>
         </div>
 
-    </div>
 
-</div>
+        <!--  <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <ul>
+                        <li class="text" *ngFor="let c of _graficasService.basuras">
+                            {{ c.nombre }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div> -->
+
+    </div>

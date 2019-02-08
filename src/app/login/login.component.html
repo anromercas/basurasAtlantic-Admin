@@ -5,23 +5,24 @@
     <div class="login-register" style="background-image:url(../assets/images/background/login-register.png);">
         <div class="login-box card">
             <div class="card-body">
-                <form class="form-horizontal form-material" id="loginform" action="index.html">
+
+                <form ngNativeValidate #f="ngForm" class="form-horizontal form-material" id="loginform" action="index.html" (ngSubmit)="login(f)">
                     <div class="form-group centrar">
                         <img src="../assets/images/logo-login.png" alt="">
                     </div>
                     <h1 class="box-title m-b-20">Acceder</h1>
                     <div class="form-group ">
                         <div class="col-xs-12">
-                            <input class="form-control" type="text" required="" placeholder="Email"> </div>
+                            <input class="form-control" [ngModel]="email" name="email" type="text" required placeholder="Email"> </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input class="form-control" type="password" required="" placeholder="Contraseña"> </div>
+                            <input class="form-control" ngModel name="pass" type="password" required placeholder="Contraseña"> </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-md-12">
                             <div class="checkbox checkbox-info pull-right p-t-0">
-                                <input id="checkbox-signup" type="checkbox" class="filled-in chk-col-light-blue">
+                                <input [ngModel]="recuerdame" name="recuerdame" id="checkbox-signup" type="checkbox" class="filled-in chk-col-light-blue">
                                 <label for="checkbox-signup"> Recordar </label>
                             </div>
                             <!-- <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> Forgot pwd?</a>  -->
