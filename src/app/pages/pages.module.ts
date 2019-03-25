@@ -16,6 +16,9 @@ import { PagesComponent } from './pages.component';
 import { GraficoBarrasComponent } from '../components/grafico-barras/grafico-barras.component';
 import { CommonModule } from '@angular/common';
 import { GraficoDonasComponent } from '../components/grafico-donas/grafico-donas.component';
+import { ListadoBasurasComponent } from './listado-basuras/listado-basuras.component';
+import { ListadoZonasComponent } from './listado-zonas/listado-zonas.component';
+import { FichaContenedorComponent } from './ficha-contenedor/ficha-contenedor.component';
 
 
 @NgModule({
@@ -24,11 +27,15 @@ import { GraficoDonasComponent } from '../components/grafico-donas/grafico-donas
         Graficas1Component,
         PagesComponent,
         GraficoBarrasComponent,
-        GraficoDonasComponent
+        GraficoDonasComponent,
+        ListadoBasurasComponent,
+        ListadoZonasComponent,
+        FichaContenedorComponent
     ],
     exports: [
         DashboardComponent,
         Graficas1Component,
+        ListadoBasurasComponent,
         PagesComponent
     ],
     imports: [

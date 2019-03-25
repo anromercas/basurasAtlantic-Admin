@@ -2,7 +2,7 @@
     <div class="col-md-4" *ngFor="let chart of chartsConfig">
         <div class="card">
             <div class="card-body text-center">
-                <h2> <u> <b> Gráfica por semana último mes completado {{ chart.leyenda }} </b> </u> </h2>
+                <h2> <u> <b> Media por zona </b> </u> </h2>
 
                 <app-grafico-barras [chartConfig]="chart">
                 </app-grafico-barras>
@@ -11,17 +11,33 @@
         </div>
     </div>
 
-    <div class="col-md-4" *ngFor="let chart of chartsConf">
-        <div class="card">
-            <div class="card-body text-center">
-                <h2> <u> <b> Gráfica por semana último mes completado </b> </u> </h2>
-                <app-grafico-donas [chartConf]="chart"></app-grafico-donas>
 
+
+
+    <div class="row">
+        <div class="col-md-4" *ngFor="let chart of chartsConfig">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h2> <u> <b> Gráfica por semana último mes completado {{ chart.leyenda }} </b> </u> </h2>
+
+                    <app-grafico-barras [chartConfig]="chart">
+                    </app-grafico-barras>
+
+                </div>
             </div>
         </div>
 
+        <div class="col-md-4" *ngFor="let chart of chartsConf">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h2> <u> <b> Gráfica por semana último mes completado </b> </u> </h2>
+                    <app-grafico-donas [chartConf]="chart"></app-grafico-donas>
 
-        <!--  <div class="col-md-6">
+                </div>
+            </div>
+
+
+            <!--  <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
                     <ul>
@@ -34,4 +50,4 @@
 
         </div> -->
 
-    </div>
+        </div>

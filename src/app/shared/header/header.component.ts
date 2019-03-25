@@ -8,8 +8,12 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class HeaderComponent implements OnInit {
 
+  email: string;
+
   constructor( public _loginService: LoginService,
-               ) { }
+               ) {
+                 this.email = localStorage.getItem('email');
+                }
 
   ngOnInit() {
   }

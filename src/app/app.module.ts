@@ -20,6 +20,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
 import { GraficoDonasComponent } from './components/grafico-donas/grafico-donas.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shred.module';
+
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    SharedModule,
     APP_ROUTES
   ],
   providers: [],

@@ -12,8 +12,8 @@ export class HeaderService {
       url: '/dashboard'
     },
     {
-      titulo: 'Inicio',
-      icono: 'mdi mdi-',
+      titulo: 'Graficas',
+      icono: 'mdi mdi-gauge',
       url: '/graficas'
     }
   ];
